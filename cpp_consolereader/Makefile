@@ -7,12 +7,18 @@ CC = g++
 CFLAGS  = -Wall
 
 # the build target executable:
-TARGET = reader
+TARGET = reader summation summation2
 
 all: $(TARGET)
 
-$(TARGET): $(TARGET).cpp
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
+reader:
+		$(CC) $(CFLAGS) -o reader reader.cpp
+
+summation:
+		$(CC) $(CFLAGS) -o summation summation.cpp
+
+summation2:
+		$(CC) $(CFLAGS) -o summation2 summation2.cpp
 
 clean:
 	$(RM) $(TARGET)
