@@ -7,12 +7,15 @@ CC = g++
 CFLAGS  = -Wall
 
 # the build target executable:
-TARGET = reader
+TARGET = whilestatement forstatement
 
 all: $(TARGET)
 
-$(TARGET): $(TARGET).cpp
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
+whilestatement:
+		$(CC) $(CFLAGS) -o whilestatement whilestatement.cpp
+
+forstatement:
+		$(CC) $(CFLAGS) -o forstatement forstatement.cpp
 
 clean:
 	$(RM) $(TARGET)
